@@ -1,0 +1,328 @@
+:root {
+    --clinipet-blue: #035E8D;
+    --clinipet-orange: #fea240;
+    --clinipet-light: #E6E2D6;
+    --clinipet-white: #ffffff;
+        }
+
+
+body {
+    background-image: url('../img/fondoPatitas.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: transparent !important;
+}
+
+
+.navbar-custom {
+    background: linear-gradient(135deg, var(--clinipet-blue), var(--clinipet-orange));
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+
+.main-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 1200px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+}
+
+
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(3,94,141,0.08);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    background: rgba(255,255,255,0.95);
+}
+
+
+.header-section, .card-header {
+    background: linear-gradient(135deg, var(--clinipet-blue) 0%, #0284c7 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.header-section::before, .card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 0%, rgba(254, 162, 64, 0.1) 50%, transparent 100%);
+}
+
+
+.form-label {
+    font-weight: bold;
+    color: var(--clinipet-blue);
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.btn-gradient-primary {
+    background: linear-gradient(90deg, var(--clinipet-blue) 0%, var(--clinipet-orange) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(3,94,141,0.12);
+    transition: background 0.3s;
+}
+
+.btn-gradient-primary:hover {
+    background: linear-gradient(90deg, var(--clinipet-orange) 0%, var(--clinipet-blue) 100%);
+    color: #fff;
+}
+
+.btn-gradient-secondary {
+    background: linear-gradient(90deg, #E6E2D6 0%, var(--clinipet-blue) 100%);
+    color: var(--clinipet-blue);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(3,94,141,0.08);
+    transition: background 0.3s;
+}
+
+.btn-gradient-secondary:hover {
+    background: linear-gradient(90deg, var(--clinipet-blue) 0%, #E6E2D6 100%);
+    color: var(--clinipet-orange);
+}
+
+/* TABLA DE FACTURA */
+.table-custom {
+    background: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(3,94,141,0.08);
+    overflow: hidden;
+}
+
+.table-custom th {
+    background: var(--clinipet-blue);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+}
+
+.table-custom td {
+    border: none;
+    color: #333;
+}
+
+/* ALERTAS Y SPINNER */
+#alertContainer {
+    margin-top: 20px;
+}
+
+.spinner-custom {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid var(--clinipet-blue);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .main-container {
+        max-width: 98vw;
+        margin: 10px;
+        padding: 1rem;
+    }
+    .header-section, .card-header {
+        padding: 30px 10px;
+    }
+}
+        }
+
+        .step.completed {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .step.inactive {
+            background: #e9ecef;
+            color: #6c757d;
+        }
+
+        .btn-custom {
+            border-radius: 25px;
+            padding: 0.7rem 2rem;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-success-custom {
+            background: linear-gradient(135deg, var(--success-color), #20c997);
+            color: white;
+        }
+
+        .btn-warning-custom {
+            background: linear-gradient(135deg, var(--warning-color), #fd7e14);
+            color: white;
+        }
+
+        .invoice-preview {
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .invoice-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 1rem;
+        }
+
+        .invoice-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        .invoice-table th,
+        .invoice-table td {
+            border: 1px solid #dee2e6;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .invoice-table th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .invoice-totals {
+            float: right;
+            width: 300px;
+            margin-top: 1rem;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .total-row.final {
+            border-bottom: 2px solid var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .product-item {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spinner-border {
+            color: var(--primary-color);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+
+        .alert-custom {
+            border: none;
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 1rem;
+            }
+
+            .invoice-info {
+                grid-template-columns: 1fr;
+            }
+
+            .step-indicator {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .step {
+                margin: 0.25rem 0;
+            }
+        }

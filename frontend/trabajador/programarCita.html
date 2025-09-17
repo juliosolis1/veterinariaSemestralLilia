@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programar Citas - CliniPet</title>
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/gestionUsuarios.css" />
+    <link rel="stylesheet" href="../assets/css/trabajador.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+</head>
+<body>
+
+            <!-- HEADER -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <span style="color: white; font-size: 2.5rem; font-weight: 600;">🐾 Clini</span><span style="color: #fea240; font-size: 2.5rem; font-weight: 600;">Pet</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active"><i class="fas fa-user-shield"></i> Trabajador</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <div class="user-info" style="display: flex; align-items: center; gap: 15px; color: white;">
+                <div style="text-align: right;">
+                    <div data-user-name style="font-weight: 600;">Cargando...</div>
+                    <div data-user-role style="font-size: 0.9rem; opacity: 0.9;">Trabajador</div>
+                </div>
+                    <a href="trabajador.html" class="login-btn"><i class="fas fa-arrow-left"></i> Regresar</a>
+            </div>
+        </div>
+    </header>
+
+    
+    <div id="header"></div>
+    <div class="container-fluid p-5 mt-5">
+        <div class="main-container">
+            <div class="header-section">
+                <h1>📅 Programar Citas</h1>
+                <p class="mb-0">Gestión de citas para clientes y mascotas</p>
+            </div>
+            <div class="p-4">
+                <ul class="nav nav-tabs custom-nav-tabs mb-4" id="citasTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="programar-tab" data-bs-toggle="tab" data-bs-target="#programarTab" type="button" role="tab">
+                            ➕ Programar Cita
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="listar-tab" data-bs-toggle="tab" data-bs-target="#listarTab" type="button" role="tab">
+                            📋 Listar Citas
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pendientes-tab" data-bs-toggle="tab" data-bs-target="#pendientesTab" type="button" role="tab">
+                            ⏳ Pendientes
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="citasTabContent">
+                    <!-- Programar Cita -->
+                    <div class="tab-pane fade show active" id="programarTab" role="tabpanel">
+                        <form id="formProgramarCita" class="form-section">
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="cedulaCliente" class="form-label">Cédula Cliente</label>
+                                    <input type="text" class="form-control" id="cedulaCliente" name="cedulaCliente" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="idMascota" class="form-label">Mascota</label>
+                                    <select class="form-select" id="idMascota" name="idMascota" required></select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="tipoServicio" class="form-label">Servicio</label>
+                                    <select class="form-select" id="tipoServicio" name="tipoServicio" required></select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="fechaCita" class="form-label">Fecha</label>
+                                    <input type="date" class="form-control" id="fechaCita" name="fechaCita" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="horaCita" class="form-label">Hora</label>
+                                    <select class="form-select" id="horaCita" name="horaCita" required></select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="observaciones" class="form-label">Observaciones</label>
+                                    <input type="text" class="form-control" id="observaciones" name="observaciones">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success">Programar Cita</button>
+                        </form>
+                    </div>
+                    <!-- Listar Citas -->
+                    <div class="tab-pane fade" id="listarTab" role="tabpanel">
+                        <div class="mb-3">
+                            <label for="buscarCedula" class="form-label">Buscar por Cédula Cliente</label>
+                            <input type="text" class="form-control" id="buscarCedula">
+                            <button id="btnBuscarCitas" class="btn btn-primary mt-2">Buscar</button>
+                        </div>
+                        <div id="tablaCitas"></div>
+                    </div>
+                    <!-- Pendientes -->
+                    <div class="tab-pane fade" id="pendientesTab" role="tabpanel">
+                        <button id="btnCitasPendientes" class="btn btn-warning mb-3">Ver Citas Pendientes</button>
+                        <div id="tablaPendientes"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/programarCita.js"></script>
+    <script src="../assets/js/include.js"></script>
+            <!-- FOOTER -->
+    <div id="footer"></div>
+    <script src="../assets/js/includeSesiones.js"></script>
+
+        <!-- Scripts -->
+    <script src="../assets/js/auth-middleware.js"></script>
+    <script src="../assets/js/trabajador.js"></script>
+</body>
+</html>
