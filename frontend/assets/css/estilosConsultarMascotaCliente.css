@@ -1,4 +1,5 @@
     /* Colores principales CliniPet */
+    :root{
     --clinipet-blue: #035E8D;
     --clinipet-orange: #fea240;
     --clinipet-light: #E6E2D6;
@@ -10,24 +11,16 @@
 
 /* Header Styles */
 .header-container {
-    background: linear-gradient(135deg, #035E8D 0%, #1565c0 100%);
+    background: #035E8D !important;
     color: white;
     padding: 1rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    --clinipet-blue: #035E8D;
-    --clinipet-orange: #fea240;
-    --clinipet-light: #E6E2D6;
-    --clinipet-white: #ffffff;
-    --clinipet-blue: #035E8D;
-    --clinipet-orange: #fea240;
-    --clinipet-light: #E6E2D6;
-    --clinipet-white: #ffffff;
-    background-image: url('../img/fondoPatitas.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
+
 
 .btn-gradient-primary {
     background: linear-gradient(90deg, var(--clinipet-blue) 0%, var(--clinipet-orange) 100%);
@@ -48,7 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -274,36 +267,21 @@
 
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('../img/fondo\ de\ pantalla\ para\ formularios.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-image: url('../img/fondoPatitas.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: transparent !important;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    overflow-x: hidden;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-color: transparent !important;
+      margin: 0;
+      padding: 0;
+      background-image: url('../img/fondoPatitas.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+
 }
 
 /* Contenedor principal más ancho */
@@ -312,47 +290,12 @@ body {
     padding: 40px 20px;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(3,94,141,0.3);
-    overflow: hidden;
-    margin: 20px auto;
+    /*aqui para el borde*/
+    margin: 100px auto;
     max-width: 1200px;
-    backdrop-filter: blur(20px);
     border: 2px solid rgba(255, 255, 255, 0.2);
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    overflow: hidden;
-    margin: 20px auto;
-    max-width: 1200px;
-    backdrop-filter: blur(20px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    padding: 2rem;
 }
-    background: linear-gradient(135deg, var(--clinipet-blue) 0%, #0284c7 100%);
-    color: white;
-    padding: 40px 30px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 0%, rgba(254, 162, 64, 0.1) 50%, transparent 100%);
-}
-    background: linear-gradient(90deg, var(--clinipet-blue) 0%, var(--clinipet-orange) 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 24px;
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(3,94,141,0.12);
-    transition: background 0.3s;
-}
+
 .btn-gradient-primary:hover {
     background: linear-gradient(90deg, var(--clinipet-orange) 0%, var(--clinipet-blue) 100%);
     color: #fff;
@@ -378,10 +321,9 @@ body {
 }
 
 .form-card {
-    background-color: #E6E2D6;
+    background-color: white !important;
     border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
