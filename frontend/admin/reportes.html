@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CliniPet - Reportes y Estadísticas</title>
+<link rel="stylesheet" href="../assets/css/admin.css" />
+<link rel="stylesheet" href="../assets/css/footer.css" />
+<link rel="stylesheet" href="../assets/css/reportes.css" />
+<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!--Agrege el font awesome, la personita-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="admin">
+<header class="header">
+  <div class="nav-container">
+    <div class="logo">
+                <i class="fas fa-paw"></i>
+                &nbsp;Clini<span style="color: #ffa500;">Pet</span>
+            </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="admin.html">Panel</a></li>
+        <li><a href="gestionServicios.html">Servicios</a></li>
+        <li><a href="gestionInventario.html">Inventario</a></li>
+        <li><a href="reportes.html" class="active">Reportes</a></li>
+      </ul>
+    </nav>
+    <a href="../login.html" class="login-btn">Cerrar Sesión</a>
+  </div>
+</header>
+
+<br><br><br><br>
+<div class="container-fluid p-5 mt-5">
+        <div class="main-container">
+<main class="admin-main">
+  <h1>Reportes y Estadísticas</h1>
+
+  <section class="controls">
+    <label>Fecha inicio: <input type="date" id="fromDate"></label>
+    <label>Fecha fin: <input type="date" id="toDate"></label>
+    <button id="btnLoad">Cargar reportes</button>
+    <div class="export-buttons">
+      <button id="btnExportPdf">Exportar PDF</button>
+      <button id="btnExportXlsx">Exportar Excel (.xlsx)</button>
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h2>Ingresos por mes</h2>
+      <canvas id="chartIngresos" height="120"></canvas>
+      <table id="tableIngresos" class="data-table"></table>
+    </div>
+
+    <div class="card">
+      <h2>Servicios más solicitados</h2>
+      <canvas id="chartServicios" height="120"></canvas>
+      <table id="tableServicios" class="data-table"></table>
+    </div>
+
+    <div class="card">
+      <h2>Productos más vendidos</h2>
+      <canvas id="chartProductos" height="120"></canvas>
+      <table id="tableProductos" class="data-table"></table>
+    </div>
+
+    <div class="card">
+      <h2>Citas (programadas / reprogramadas)</h2>
+      <canvas id="chartCitas" height="120"></canvas>
+      <table id="tableCitas" class="data-table"></table>
+    </div>
+
+    <div class="card">
+      <h2>Eficiencia de Agenda</h2>
+      <canvas id="chartEficiencia" height="120"></canvas>
+      <table id="tableEficiencia" class="data-table"></table>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+    <div id="footer"></div>
+    <script src="../assets/js/includeSesiones.js"></script>
+
+<script src="../assets/js/reportes.js"></script>
+</body>
+</html>
