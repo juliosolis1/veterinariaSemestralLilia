@@ -92,8 +92,8 @@
 }
 
 .back-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: #035E8D;
+    border: 2px solid white;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 25px;
@@ -295,15 +295,7 @@ body {
     background: linear-gradient(90deg, var(--clinipet-orange) 0%, var(--clinipet-blue) 100%);
     color: #fff;
 }
-    background: linear-gradient(90deg, var(--clinipet-blue) 0%, var(--clinipet-orange) 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 24px;
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(3,94,141,0.12);
-    transition: background 0.3s;
-}
+
 .btn-gradient-primary:hover {
     background: linear-gradient(90deg, var(--clinipet-orange) 0%, var(--clinipet-blue) 100%);
     color: #fff;
