@@ -461,3 +461,16 @@ body {
     gap: 0;  /* Elimina espacio entre elementos */
     white-space: nowrap; /* Evita saltos de línea */
 }
+
+.admin-badge {
+    background: rgba(255, 165, 0, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.admin-badge i {
+    color: #ffa500;
+}
